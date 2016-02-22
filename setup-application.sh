@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export COMPOSER_HOME="/root"
+
 cd /var/www/stock5
 
 scl enable php55 '/bin/composer install --no-dev --optimize-autoloader --no-interaction' &>> /tmp/cd_debug
