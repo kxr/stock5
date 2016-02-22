@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/stock5
+hooks:
+   BeforeInstall:
+     - location: delete-application.sh
+       timeout: 180
+   AfterInstall:
+     - location: setup-application.sh
+       timeout: 180

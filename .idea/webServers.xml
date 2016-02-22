@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d99b1cc7-c01b-4a97-9d47-62d696666961" name="ec2-stock5" url="http://stock5.kxr.me">
+        <fileTransfer host="stock5.kxr.me" port="22" privateKey="$USER_HOME$/stock5.pem" accessType="SFTP" username="root" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
