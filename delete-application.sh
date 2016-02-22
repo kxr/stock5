@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf /var/www/ttapp
+rm -rf /var/www/stock5
