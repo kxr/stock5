@@ -3,3 +3,7 @@ os: linux
 files:
   - source: /
     destination: /var/www/stock5
+hooks:
+   AfterInstall:
+     - location: setup-application.sh
+       timeout: 180
