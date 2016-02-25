@@ -22,7 +22,7 @@ class CreateItemsTable extends Migration
             $table->string('size');
             $table->string('note');
 
-            $table->foreign('group_id')->references('id')->on('items');
+            $table->foreign('group_id')->references('id')->on('igroups');
 
             $table->timestamps();
         });
