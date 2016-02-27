@@ -107,7 +107,7 @@ class CreateStock5Table extends Migration
             $table->timestamps();
 
             $table->foreign('pinv_id')->references('id')->on('pinv');
-            $table->foreign('opayment_id')->references('id')->on('opayemnts');
+            $table->foreign('opayment_id')->references('id')->on('opayments');
         });
 
 
