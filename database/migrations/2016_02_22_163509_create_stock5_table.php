@@ -142,7 +142,7 @@ class CreateStock5Table extends Migration
             $table->timestamps();
 
             $table->foreign('sinv_id')->references('id')->on('sinv');
-            $table->foreign('ipayment_id')->references('id')->on('ipayemnts');
+            $table->foreign('ipayment_id')->references('id')->on('ipayments');
         });
 
         Schema::create('stransactions', function (Blueprint $table) {
