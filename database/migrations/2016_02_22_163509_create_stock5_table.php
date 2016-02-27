@@ -92,12 +92,12 @@ class CreateStock5Table extends Migration
                 $table->string('invoice');
                 $table->float('discount')->unsigned();
                 $table->text('note');
-                $table->integer('payment_id')->unsigned();
+                $table->integer('opayment_id')->unsigned();
                 $table->text('status');
                 $table->timestamps();
 
                 $table->foreign('vendor_id')->references('id')->on('vendors');
-                $table->foreign('payment_id')->references('id')->on('payments');
+                $table->foreign('opayment_id')->references('id')->on('opayments');
         });
 
         Schema::create('opayments2pinv', function (Blueprint $table) {
@@ -142,7 +142,7 @@ class CreateStock5Table extends Migration
             $table->timestamps();
 
             $table->foreign('sinv_id')->references('id')->on('sinv');
-            $table->foreign('ipayment_id')->references('id')->on('payemnts');
+            $table->foreign('ipayment_id')->references('id')->on('ipayemnts');
 
             $table->timestamps();
         });
@@ -183,8 +183,5 @@ class CreateStock5Table extends Migration
         Schema::drop('sinv');
         Schema::drop('ipayments2sinv');
         Schema::drop('stransactions');
-
-
-
     }
 }
