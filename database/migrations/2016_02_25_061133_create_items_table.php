@@ -20,11 +20,12 @@ class CreateItemsTable extends Migration
             $table->string('color');
             $table->string('make');
             $table->string('size');
+            $table->integer('sale_price');
             $table->string('note');
+            $table->timestamps();
 
             $table->foreign('group_id')->references('id')->on('igroups');
 
-            $table->timestamps();
         });
     }
 
